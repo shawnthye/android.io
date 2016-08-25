@@ -1,1 +1,1 @@
-include ':io', ':me'
+include ':io', ':me', ':accounts'

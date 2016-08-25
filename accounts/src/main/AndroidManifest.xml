@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:sharedUserId="shawn.thye.uid.shared"
+          package="shawn.thye.accounts">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application>
+        <activity
+                android:name=".AddAccountActivity"
+                android:label="@string/account"
+                android:launchMode="singleTask"
+                android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <service
+                android:name=".AuthenticatorService"
+                android:exported="true"
+                android:enabled="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data
+                    android:name="android.accounts.AccountAuthenticator"
+                    android:resource="@xml/authenticator"/>
+        </service>
+
+    </application>
+
+
+</manifest>
