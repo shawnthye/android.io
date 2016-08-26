@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="Title Category">
-        <CheckBoxPreference
-                android:title="CheckBox"/>
+        
     </PreferenceCategory>
+
+    <!--<CheckBoxPreference-->
+    <!--android:title="CheckBox"-->
+    <!--android:key="isDebug"/>-->
+
 
 </PreferenceScreen>
